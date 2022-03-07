@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Rock+Salt|Raleway:500' rel='stylesheet' type='text/css'>
-
-  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<title>Task List</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
   margin: 0;
-  min-width: 250px;
+  min-width: 150px;
 }
 
 * {
   box-sizing: border-box;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: linear-gradient(120deg,#487eb0,#fbc531);
+  min-height: 100vh;
 }
 
 ul {
@@ -86,7 +97,7 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-  background-color: rgb(255, 182, 193);
+  background-color: linear-gradient(120deg,#487eb0,#fbc531);
   padding: 30px 40px;
   color: black;
   text-align: left;
@@ -115,13 +126,14 @@ input {
 .addBtn {
     position: right;
     display: inline-block;
-    padding: 30px 30px;
-    margin: 20px 0;
+    padding: 10px;
+    width = 25%;
+    text-align: center;
     color: #03e9f4;
-    text-decoration: none;
     text-transform: uppercase;
     transition: 0.5s;
     letter-spacing: 4px;
+    font-size: 16px;
     overflow: hidden;
     margin-right: 25px;
    
@@ -130,23 +142,18 @@ input {
 .addBtn:hover {
   background: #03e9f4;
     color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 200px #03e9f4;
-     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    
 }
 </style>
 </head>
 <body>
 
 <div id="myDIV" class="header">
-  <h2 style="margin:5px">My To Do List</h2>
+  <h1 style="margin:5px">My To Do List</h1>
   <input type="text" id="myInput" placeholder="Title...">
   <span onclick="newElement()" class="addBtn">Add</span>
-
-  <h3 style="margin:0.5px">Add Task Date</3>
-  <h4>
+  <h2 style="margin:0.5px">Add Task Date</2>
+  <h3>
   <input type="date" id="taskdate" placeholder="enter date...">
   </h4>
 </div>
@@ -217,5 +224,6 @@ function newElement() {
 
 </body>
 </html>
+
 
 
