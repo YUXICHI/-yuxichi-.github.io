@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Rock+Salt|Raleway:500' rel='stylesheet' type='text/css'>
+
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
@@ -8,28 +12,28 @@ body {
   min-width: 250px;
 }
 
-/* Include the padding and border in an element's total width and height */
 * {
   box-sizing: border-box;
 }
 
-/* Remove margins and padding from the list */
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* Style the list items */
 ul li {
   cursor: pointer;
   position: relative;
+  font-family: "Raleway", sans-serif;
+  margin : 2%;
   padding: 12px 8px 12px 40px;
   list-style-type: none;
   background: #eee;
   font-size: 18px;
+  font-weight: bold;
   transition: 0.2s;
   
-  /* make the list items unselectable */
+  /*  unselectable */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -53,7 +57,7 @@ ul li.checked {
   text-decoration: line-through;
 }
 
-/* Add a "checked" mark when clicked on */
+/* Add a "checked" mark */
 ul li.checked::before {
   content: '';
   position: absolute;
@@ -82,17 +86,18 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-  background-color: #f44336;
+  background-color: rgb(255, 182, 193);
   padding: 30px 40px;
-  color: white;
-  text-align: center;
+  color: black;
+  text-align: left;
 }
 
-/* Clear floats after the header */
 .header:after {
+  
   content: "";
   display: table;
   clear: both;
+  background-color: rgb(230, 230, 250);
 }
 
 /* Style the input */
@@ -108,20 +113,28 @@ input {
 
 /* Style the "Add" button */
 .addBtn {
-  padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: #555;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 0;
+    position: right;
+    display: inline-block;
+    padding: 30px 30px;
+    margin: 20px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 25px;
+   
 }
 
 .addBtn:hover {
-  background-color: #bbb;
+  background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 </style>
 </head>
@@ -131,6 +144,7 @@ input {
   <h2 style="margin:5px">My To Do List</h2>
   <input type="text" id="myInput" placeholder="Title...">
   <span onclick="newElement()" class="addBtn">Add</span>
+
   <h3 style="margin:0.5px">Add Task Date</3>
   <h4>
   <input type="date" id="taskdate" placeholder="enter date...">
